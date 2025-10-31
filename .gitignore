@@ -31,5 +31,7 @@ dist/
 
 .idea
 
+package-lock.json
+
 # typescript
 .tsbuildinfo
