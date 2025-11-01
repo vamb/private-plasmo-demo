@@ -26,8 +26,15 @@
     "typescript": "5.3.3"
   },
   "manifest": {
+    "permissions": [
+      "tabs",
+      "activeTab",
+      "scripting",
+      "storage",
+      "sidePanel"
+    ],
     "host_permissions": [
-      "https://*/*"
+      "<all_urls>"
     ]
   }
 }
