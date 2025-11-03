@@ -4,7 +4,7 @@ import { sendToBackground } from "@plasmohq/messaging";
 
 export const config: PlasmoCSConfig = {
   matches: ["<all_urls>"],  // 匹配的网址模式
-  run_at: "document_end"                 // 执行时机
+  // run_at: "document_end"                 // 执行时机
 }
 
 function contentPage() {
@@ -21,7 +21,7 @@ function contentPage() {
       },
       // extensionId: 'lgkgijeelnnhfgkejmpkgapgdacelmfg' // 在 Chrome 的扩展管理器中找到此 ID
     })
-    console.log('init', resp)
+    console.log('init resp', resp)
   }
 
 
