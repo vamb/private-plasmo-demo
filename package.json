@@ -31,10 +31,16 @@
       "activeTab",
       "scripting",
       "storage",
-      "sidePanel"
+      "sidePanel",
+      "background"
     ],
     "host_permissions": [
       "<all_urls>"
-    ]
+    ],
+    "externally_connectable": {
+      "matches": [
+        "<all_urls>"
+      ]
+    }
   }
 }

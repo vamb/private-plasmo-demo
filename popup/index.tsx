@@ -1,6 +1,5 @@
 import { useState } from "react"
-import { sendToBackground } from "@plasmohq/messaging"
-
+import { sendToBackground, sendToContentScript } from "@plasmohq/messaging";
 
 function IndexPopup() {
   const [ data, setData ] = useState("")
@@ -9,18 +8,26 @@ function IndexPopup() {
     const resp = await sendToBackground({
       name: "ping",
       body: {
-        id: 123
+        id: data
       }
     })
-    console.log('resp', resp)
+    console.log('handleSendMsg resp', resp)
   }
+
+  // const handleContentScript = async () => {
+  //   const resp = await sendToContentScript({
+  //     name:
+  //   })
+  // }
 
   return (
     <div
       style={{
-        padding: 16
+        width: '200px',
+        padding: 16, display: 'flex', flexDirection: 'column',
+        justifyContent: 'flex-start', gap: '.25rem'
       }}>
-      <div style={{cursor: "pointer"}} onClick={handleSendMsg}>send Msg Btn</div>
+      <button style={{cursor: "pointer"}} onClick={handleSendMsg}>bg ping msg</button>
       <input onChange={(e) => setData(e.target.value)} value={data} />
       <a href="https://docs.plasmo.com" target="_blank">
         View Docs
