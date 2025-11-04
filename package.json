@@ -10,6 +10,8 @@
     "package": "plasmo package"
   },
   "dependencies": {
+    "@ant-design/cssinjs": "1.18.2",
+    "antd": "5.13.2",
     "@plasmohq/messaging": "^0.7.2",
     "@plasmohq/storage": "^1.15.0",
     "plasmo": "0.90.5",

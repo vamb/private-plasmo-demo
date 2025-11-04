@@ -26,8 +26,12 @@ function IndexPopup() {
 
   // const handleContentScript = async () => {
   //   const resp = await sendToContentScript({
-  //     name:
+  //     name: "message-handler",
+  //     body: {
+  //       action: "getPageInfo"
+  //     }
   //   })
+  //   console.log(`handleContentScript resp`, resp)
   // }
 
   return (
@@ -42,7 +46,7 @@ function IndexPopup() {
       <a href="https://docs.plasmo.com" target="_blank">
         View Docs
       </a>
-      <button style={{cursor: "pointer"}} onClick={handleSendMsgToContentScript}>content-script ping msg</button>
+      {/*<button style={{cursor: "pointer"}} onClick={handleContentScript}>content-script ping msg</button>*/}
     </div>
   )
 }
